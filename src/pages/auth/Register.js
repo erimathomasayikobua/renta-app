@@ -243,6 +243,26 @@ const Register = ({ onNavigate }) => {
                   <option value="landscaping">Landscaping</option>
                   <option value="painting">Painting</option>
                   <option value="carpentry">Carpentry</option>
+                  <option value="hostel">Hostel</option>
+                  <option value="Motel">Motel</option>
+                  <option value="HOtel">Hotel</option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
                 </select>
               </div>
             </>
@@ -285,6 +305,14 @@ const Register = ({ onNavigate }) => {
             Login
           </span>
         </div>
+        <form className=''>
+          <a href='https://accounts.google.com/signup' target='_blank'>
+          <i className='fab fa-google'></i>Google</a>
+          <a href='https://signup.yahoo.com' target='_blank'>
+          <i className='fab fa-yahoo'></i> Yahoo! </a>
+          <a href='https://accounts.appleid.io/'>
+          <i className='fab fa-Apple'></i> Apple </a>
+        </form>
       </div>
     </div>
   );

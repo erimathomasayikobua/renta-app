@@ -1,4 +1,5 @@
 import React from 'react';
+import { useCurrency } from '../../contexts/CurrencyContext';
 import styles from './Card.module.css';
 
 const Card = ({ 
@@ -66,14 +67,17 @@ export const CardRating = ({ rating, reviews }) => (
   </div>
 );
 
-export const CardPrice = ({ amount, label }) => (
-  <div>
-    <div className={styles.price}>
-      ${amount}
-      {label && <span className={styles.priceLabel}> {label}</span>}
+export const CardPrice = ({ amount, label, fromCurrency = 'USD' }) => {
+  const { format } = useCurrency();
+  return (
+    <div>
+      <div className={styles.price}>
+        {format(amount, fromCurrency)}
+        {label && <span className={styles.priceLabel}> {label}</span>}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export const CardFeatures = ({ features }) => (
   <div className={styles.features}>

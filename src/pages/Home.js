@@ -68,6 +68,9 @@ const Home = ({ onNavigate }) => {
             <Button variant="secondary" size="large" onClick={() => onNavigate('houses')}>
               Find Homes
             </Button>
+            <Button variant="secondary" size="large" onClick={() => onNavigate('services')}>
+              Navigate Services
+            </Button>
           </div>
         </div>
       </section>

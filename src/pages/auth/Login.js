@@ -91,6 +91,15 @@ const Login = ({ onNavigate }) => {
             Sign up
           </span>
         </div>
+        <form className='Login-options'>
+             <p>Signup with ...</p>
+          <a href='https://accounts.google.com/signin' target='_blank'>
+          <i className='fab fa-google'/>Google</a>
+          <a href='https://login.yahoo.com/' target='_blank'>
+          <i className='fab fa-yahoo'></i> Yahoo! </a>
+          <a href='https://appleid.io' target='_blank'>
+          <i className='fab fa-apple'></i> Apple Id </a>
+        </form>
       </div>
     </div>
   );

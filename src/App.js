@@ -5,6 +5,7 @@ import { ChatProvider } from './contexts/ChatContext';
 import { CurrencyProvider } from './contexts/CurrencyContext';
 import { LocationProvider } from './contexts/LocationContext';
 import { initializeMockData } from './utils/mockData';
+import { ThemeProvider } from './contexts/ThemeContext';
 import Header from './components/layout/Header';
 import Home from './pages/Home';
 import Login from './pages/auth/Login';
@@ -68,18 +69,20 @@ function App() {
 
   return (
     <AuthProvider>
-      <CurrencyProvider>
-        <LocationProvider>
-          <BookingProvider>
-            <ChatProvider>
-              <div className="App">
-                <Header currentPage={currentPage} onNavigate={handleNavigate} />
-                <main>{renderPage()}</main>
-              </div>
-            </ChatProvider>
-          </BookingProvider>
-        </LocationProvider>
-      </CurrencyProvider>
+      <ThemeProvider>
+        <CurrencyProvider>
+          <LocationProvider>
+            <BookingProvider>
+              <ChatProvider>
+                <div className="App">
+                  <Header currentPage={currentPage} onNavigate={handleNavigate} />
+                  <main>{renderPage()}</main>
+                </div>
+              </ChatProvider>
+            </BookingProvider>
+          </LocationProvider>
+        </CurrencyProvider>
+      </ThemeProvider>
     </AuthProvider>
   );
 }

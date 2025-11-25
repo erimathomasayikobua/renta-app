@@ -21,6 +21,24 @@ export const initializeMockData = () => {
         role: 'provider',
         phone: '+1234567891',
         createdAt: new Date().toISOString()
+      },
+      {
+        id: '3',
+        name: 'Second Admin',
+        email: 'admin2@renta.com',
+        password: 'admin123',
+        role: 'admin',
+        phone: '+1234567892',
+        createdAt: new Date().toISOString()
+      },
+      {
+        id: '4',
+        name: 'Support Agent',
+        email: 'agent@renta.com',
+        password: 'agent123',
+        role: 'agent',
+        phone: '+1234567893',
+        createdAt: new Date().toISOString()
       }
     ];
     

@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
 import { useChat } from '../../contexts/ChatContext';
 import Button from '../common/Button';
+import { useTheme } from '../../contexts/ThemeContext';
 import styles from './Header.module.css';
 
 const Header = ({ currentPage, onNavigate }) => {
   const { user, logout, isAdmin, isProvider, isCustomer } = useAuth();
+  const { theme, setTheme, themes } = useTheme();
   const { unreadCount } = useChat();
   const [showUserMenu, setShowUserMenu] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -82,6 +84,19 @@ const Header = ({ currentPage, onNavigate }) => {
         </nav>
 
         <div className={styles.actions}>
+          <div className={styles.themeToggle}>
+            <select
+              className={styles.themeSelect}
+              value={theme}
+              onChange={(e) => setTheme(e.target.value)}
+            >
+              {themes.map((t) => (
+                <option key={t} value={t}>
+                  {t.charAt(0).toUpperCase() + t.slice(1)}
+                </option>
+              ))}
+            </select>
+          </div>
           {user ? (
             <>
               <div className={styles.chatBadge}>

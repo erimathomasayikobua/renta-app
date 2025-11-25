@@ -80,9 +80,9 @@ const Support = ({ onNavigate }) => {
     {
       icon: '📞',
       title: 'Phone Support',
-      description: '+1 (800) 123-4567',
+      description: '+256 726 137 083',
       action: 'Call Now',
-      link: 'tel:+18001234567'
+      link: 'tel:+256726137083'
     },
     {
       icon: '💬',
@@ -102,7 +102,6 @@ const Support = ({ onNavigate }) => {
   const handleTicketSubmit = (e) => {
     e.preventDefault();
     
-    // Save ticket to localStorage
     const tickets = JSON.parse(localStorage.getItem('rentaAppTickets') || '[]');
     const newTicket = {
       id: Date.now().toString(),
